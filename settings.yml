@@ -17,6 +17,17 @@ align_right_text:
   default: "-uploaded image goes here-"
   description:
     en: "Enter the placeholder text that appears in the composer after the user clicks the button."
+
+align_center_button:
+  default: "align image center of post"
+  description:
+    en: "Enter the text for the title of the button in the composer."
+    
+align_center_text:
+  default: "-uploaded image goes here-"
+  description:
+    en: "Enter the placeholder text that appears in the composer after the user clicks the button."
+    
     
 image_grid_button:
   default: "make muliple images grid"
