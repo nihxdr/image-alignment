@@ -25,6 +25,14 @@
           perform: e => e.applySurround('<div data-theme-image="right">\n\n', '\n</div>', 'align_right_text')
       });
   });
+  api.onToolbarCreate(toolbar => {
+      toolbar.addButton({
+          id: "align_center_button",
+          group: "extras",
+          icon: "arrow-alt-h",
+          perform: e => e.applySurround('<div align="center">\n', '\n</div>', 'align_center_text')
+      });
+  });
 
   // TEXTS
   let translations = I18n.translations[I18n.currentLocale()].js;
@@ -40,7 +48,10 @@
 
   translations.composer.align_right_button_title = settings.align_right_button;
   translations.composer.align_right_text = settings.align_right_text;
-
+  
+  translations.composer.align_center_button_title = settings.align_center_button;
+  translations.composer.align_center_text = settings.align_center_text;
+  
   translations.composer.image_grid_button_title = settings.image_grid_button;
   translations.composer.image_grid_text = settings.image_grid_text;
 </script>
