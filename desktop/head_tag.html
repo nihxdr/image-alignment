@@ -11,14 +11,6 @@ api.onToolbarCreate(toolbar => {
 });
 api.onToolbarCreate(toolbar => {
     toolbar.addButton({
-        id: "grid_button",
-        group: "extras",
-        icon: "image",
-        perform: e => e.applySurround('[grid]', '[/grid]', 'image_grid')
-    });
-});
-api.onToolbarCreate(toolbar => {
-    toolbar.addButton({
         id: "strikethrough_button",
         group: "fontStyles",
         icon: "strikethrough",
@@ -39,6 +31,14 @@ api.onToolbarCreate(toolbar => {
         group: "fontStyles",
         icon: "subscript",
 		perform: e => e.applySurround('<sub>', '</sub>', 'subscript_text')
+    });
+});
+api.onToolbarCreate(toolbar => {
+    toolbar.addButton({
+        id: "image_grid_button",
+        group: "extras",
+        icon: "image",
+        perform: e => e.applySurround('[grid]', '[/grid]', 'image_grid')
     });
 });
 api.onToolbarCreate(toolbar => {
