@@ -1,2 +1,2 @@
-# image-alignment
-adds buttons to toolbar for image alignment
+# Discourse image-alignment
+adds buttons to composer toolbar for image alignment with text and multiple image grid layout.
