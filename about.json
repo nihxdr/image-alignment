@@ -1,9 +1,8 @@
 {
   "name": "image-alignment",
   "component": true,
-  "license_url": null,
-  "about_url": null,
-  "authors": null,
+  "license_url": "https://github.com/Lillinator/image-alignment/blob/main/LICENSE",
+  "about_url": "https://github.com/Lillinator/image-alignment/blob/main/README.md",
+  "authors": @Lillinator,
   "theme_version": "1.0",
-  "learn_more": "https://meta.discourse.org/t/beginners-guide-to-using-discourse-themes/91966"
 }
