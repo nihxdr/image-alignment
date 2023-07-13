@@ -1,8 +1,8 @@
 <script type="text/discourse-plugin" version="0.8">
   const { iconNode } = require("discourse-common/lib/icon-library");
-  
+
   // * toolbar buttons * //
-  
+
   api.onToolbarCreate(toolbar => {
       toolbar.addButton({
           id: "image_grid_button",
@@ -37,7 +37,7 @@
   });
 
   // * Text translations * //
-  
+
   let translations = I18n.translations[I18n.currentLocale()].js;
   if (!translations) {
     translations = {};
@@ -51,10 +51,10 @@
 
   translations.composer.align_right_button_title = settings.align_right_button;
   translations.composer.align_right_text = settings.align_right_text;
-  
+
   translations.composer.align_center_button_title = settings.align_center_button;
   translations.composer.align_center_text = settings.align_center_text;
-  
+
   translations.composer.image_grid_button_title = settings.image_grid_button;
   translations.composer.image_grid_text = settings.image_grid_text;
 </script>
