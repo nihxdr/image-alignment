@@ -11,6 +11,14 @@ api.onToolbarCreate(toolbar => {
 });
 api.onToolbarCreate(toolbar => {
     toolbar.addButton({
+        id: "grid_button",
+        group: "extras",
+        icon: "image",
+        perform: e => e.applySurround('[grid]', '[/grid]', 'image_grid')
+    });
+});
+api.onToolbarCreate(toolbar => {
+    toolbar.addButton({
         id: "strikethrough_button",
         group: "fontStyles",
         icon: "strikethrough",
@@ -130,5 +138,8 @@ translations.composer.columns_text =
 translations.float_left_button = settings.float_left_button;
 translations.composer.float_left_text =
   settings.float_left_text;
- 
+	
+translations.image_grid_button = settings.image_grid_button;
+translations.composer.image_grid =
+  settings.image_grid;
 </script>
