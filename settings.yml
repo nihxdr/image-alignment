@@ -42,6 +42,6 @@ image_grid_text:
 Svg_icons: 
   type: 'list'
   list_type: 'compact'
-  default: 'fa-angle-left|fa-angle-right|fa-arrow-alt-h|fa-compress'
+  default: 'fa-angle-left|fa-angle-right|fa-arrows-alt-h|fa-compress'
   description: 
     en: "Include FontAwesome 5 icon classes for each icon used in the list."
