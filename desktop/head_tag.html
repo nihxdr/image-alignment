@@ -26,22 +26,6 @@ api.onToolbarCreate(toolbar => {
     });
 });
 
-// TEXTS
-let translations = I18n.translations[I18n.currentLocale()].js;
-if (!translations) {
-  translations = {};
-}
-if (!translations.composer) {
-  translations.composer = {};
-}
 
-translations.composer.align_left_button_title = settings.align_left_button;
-translations.composer.align_left_text = settings.align_left_text;
-
-translations.composer.align_right_button_title = settings.align_right_button;
-translations.composer.align_right_text = settings.align_right_text;
-
-translations.image_grid_button = settings.image_grid_button;
-translations.composer.image_grid = settings.image_grid;
 	
 </script>
