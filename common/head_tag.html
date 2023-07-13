@@ -6,7 +6,9 @@
           id: "image_grid_button",
           group: "extras",
           icon: "compress",
-          perform: e => e.applySurround('[grid]', '[/grid]', 'image_grid_text')
+          perform: e => e.applySurround('[grid]
+          
+          ', '[/grid]', 'image_grid_text')
       });
   });
   api.onToolbarCreate(toolbar => {
@@ -14,7 +16,9 @@
           id: "align_left_button",
           group: "extras",
           icon: "angle-left",
-          perform: e => e.applySurround('<div data-theme-image="left">\n', '\n</div>', 'align_left_text')
+          perform: e => e.applySurround('<div data-theme-image="left">
+            
+            \n', '\n</div>', 'align_left_text')
       });
   });
   api.onToolbarCreate(toolbar => {
@@ -22,7 +26,9 @@
           id: "align_right_button",
           group: "extras",
           icon: "angle-right",
-          perform: e => e.applySurround('<div data-theme-image="right">\n', '\n</div>', 'align_right_text')
+          perform: e => e.applySurround('<div data-theme-image="right">
+            
+            \n', '\n</div>', 'align_right_text')
       });
   });
 
