@@ -26,6 +26,18 @@ api.onToolbarCreate(toolbar => {
     });
 });
 
+// TEXTS
+let translations = I18n.translations[I18n.currentLocale()].js;
+if (!translations) {
+  translations = {};
+}
+if (!translations.composer) {
+  translations.composer = {};
+}
+
+translations.composer.align_left_button_title = settings.align_left_button;
+translations.composer.align_left_text = settings.align_left_text;
+
 
 	
 </script>
