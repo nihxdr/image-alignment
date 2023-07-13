@@ -1,11 +1,15 @@
-[data-wrap="center"] {
-  text-align: center;
+// image alignment with text in posts
+
+[data-theme-image="left"] {
+    float: left;
+    img {
+      margin: 0 1em 0 0;
+    }
 }
 
-[data-wrap="right"] {
-  text-align: right;
-}
-
-[data-wrap="justify"] {
-  text-align: justify;
+[data-theme-image="right"] {
+    float: right;
+    img {
+      margin: 0em 0em 0em 1em;
+    }
 }
