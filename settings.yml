@@ -4,7 +4,7 @@ align_left_button:
     en: "Enter the text for the title of the button in the composer."
     
 align_left_text:
-  default: "uploaded image goes here"
+  default: "-uploaded image goes here-"
   description:
     en: "Enter the placeholder text that appears in the composer after the user clicks the button."
     
@@ -14,7 +14,7 @@ align_right_button:
     en: "Enter the text for the title of the button in the composer."
     
 align_right_text:
-  default: "uploaded image goes here"
+  default: "-uploaded image goes here-"
   description:
     en: "Enter the placeholder text that appears in the composer after the user clicks the button."
     
@@ -24,7 +24,7 @@ image_grid_button:
     en: "Enter the text for the title of the button in the composer."
     
 image_grid_text:
-  default: "uploaded images go here"
+  default: "-uploaded images go here-"
   description:
     en: "Enter the placeholder text that appears in the composer after the user clicks the button."
 
