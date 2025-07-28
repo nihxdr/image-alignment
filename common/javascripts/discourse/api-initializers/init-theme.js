@@ -4,40 +4,71 @@ import I18n from "discourse-i18n";
 export default apiInitializer((api) => {
   // * toolbar buttons * //
   
-  api.onToolbarCreate(toolbar => {
-      toolbar.addButton({
-          id: "image_grid_button",
-          group: "extras",
-          icon: "compress",
-          perform: e => e.applySurround('[grid]\n\n', '\n\n[/grid]', 'image_grid_text')
-      });
+  // Add image grid button
+  api.modifyClass("component:composer-editor", {
+    actions: {
+      imageGrid() {
+        this.composer.insertText('[grid]\n\n-uploaded images go here-\n\n[/grid]');
+      }
+    }
   });
-  
-  api.onToolbarCreate(toolbar => {
-      toolbar.addButton({
-          id: "align_left_button",
-          group: "extras",
-          icon: "angle-left",
-          perform: e => e.applySurround('<div data-theme-image="left">\n\n', '\n\n</div>', 'align_left_text')
-      });
+
+  // Add alignment buttons
+  api.modifyClass("component:composer-editor", {
+    actions: {
+      alignLeft() {
+        this.composer.insertText('<div data-theme-image="left">\n\n-uploaded image goes here-\n\n</div>');
+      },
+      alignRight() {
+        this.composer.insertText('<div data-theme-image="right">\n\n-uploaded image goes here-\n\n</div>');
+      },
+      alignCenter() {
+        this.composer.insertText('<div align="center">\n\n-uploaded image goes here-\n\n</div>');
+      }
+    }
   });
-  
-  api.onToolbarCreate(toolbar => {
-      toolbar.addButton({
-          id: "align_right_button",
-          group: "extras",
-          icon: "angle-right",
-          perform: e => e.applySurround('<div data-theme-image="right">\n\n', '\n\n</div>', 'align_right_text')
+
+  // Add toolbar buttons using the correct API
+  api.modifyClass("component:composer-editor", {
+    buildToolbar() {
+      const toolbar = this._super(...arguments);
+      
+      // Add image grid button
+      toolbar.push({
+        id: "image_grid_button",
+        group: "extras",
+        icon: "compress",
+        action: "imageGrid",
+        title: "make multiple images grid"
       });
-  });
-  
-  api.onToolbarCreate(toolbar => {
-      toolbar.addButton({
-          id: "align_center_button",
-          group: "extras",
-          icon: "left-right",
-          perform: e => e.applySurround('<div align="center">\n\n', '\n\n</div>', 'align_center_text')
+      
+      // Add alignment buttons
+      toolbar.push({
+        id: "align_left_button",
+        group: "extras", 
+        icon: "angle-left",
+        action: "alignLeft",
+        title: "align image left of text"
       });
+      
+      toolbar.push({
+        id: "align_right_button",
+        group: "extras",
+        icon: "angle-right", 
+        action: "alignRight",
+        title: "align image right of text"
+      });
+      
+      toolbar.push({
+        id: "align_center_button",
+        group: "extras",
+        icon: "left-right",
+        action: "alignCenter", 
+        title: "align image center of post"
+      });
+      
+      return toolbar;
+    }
   });
 
   // * Text translations * //
