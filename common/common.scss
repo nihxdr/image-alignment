@@ -1,15 +1,59 @@
 // * image alignment with text in posts * //
 
 [data-theme-image="left"] {
-    float: left;
-    img {
-      margin: 0 1em 0 0;
-    }
+  float: left;
+  img {
+    margin: 0 1em 0 0;
+  }
 }
 
 [data-theme-image="right"] {
-    float: right;
-    img {
-      margin: 0em 0em 0em 1em;
-    }
+  float: right;
+  img {
+    margin: 0em 0em 0em 1em;
+  }
+}
+
+// * Composer toolbar button styling * //
+
+.composer-popup .toolbar .btn[data-id="align_left_button"],
+.composer-popup .toolbar .btn[data-id="align_right_button"],
+.composer-popup .toolbar .btn[data-id="align_center_button"],
+.composer-popup .toolbar .btn[data-id="image_grid_button"] {
+  background-color: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  padding: 5px 10px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.composer-popup .toolbar .btn:hover {
+  background-color: #e0e0e0;
+}
+
+// * Grid layout styling for multiple images * //
+[grid] {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1em;
+  margin: 1em 0;
+}
+
+[grid] img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+// * Center alignment styling * //
+div[align="center"] {
+  text-align: center;
+  margin: 1em 0;
+}
+
+div[align="center"] img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
 }
